@@ -4,7 +4,8 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I.
 
-SRC= 	ft_printf.c
+SRC= ft_printf.c	ft_print_char.c	ft_print_hex.c	ft_print_nbr.c	ft_print_ptr.c \
+	ft_print_str.c	ft_print_uint.c
 
 OBJ = ${SRC:.c=.o}
 
