@@ -6,7 +6,14 @@
 /*   By: aouassar <aouassar@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:17:30 by aouassar          #+#    #+#             */
-/*   Updated: 2025/11/17 16:17:31 by aouassar         ###   ########.fr       */
+/*   Updated: 2025/11/22 15:11:05 by aouassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int	ft_print_char(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
