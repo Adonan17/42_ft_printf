@@ -6,7 +6,7 @@
 /*   By: aouassar <aouassar@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:17:13 by aouassar          #+#    #+#             */
-/*   Updated: 2025/11/20 10:00:44 by aouassar         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:03:23 by aouassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,21 @@
 
 static int	ft_formats(va_list args, char specifier)
 {
-	
+	if (specifier == 'c')
+		return (ft_print_char(va_arg(args, int)));
+	else if (specifier == 's')
+		return (ft_print_str(va_arg(args, char *)));
+	else if (specifier == 'd' || specifier == 'i')
+		return (ft_print_nbr(va_arg(args, int)));
+	else if (specifier == 'u')
+		return (ft_print_uint(va_arg(args, unsigned int)));
+	else if (specifier == 'x' || specifier == 'X')
+		return (ft_print_hex(va_arg(args, unsigned int), specifier));
+	else if (specifier == 'p')
+		return (ft_print_ptr(va_arg(args, unsigned long long)));
+	else if (specifier == '%')
+		return (write(1, "%", 1));
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
