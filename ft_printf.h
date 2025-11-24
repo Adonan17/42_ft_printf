@@ -6,15 +6,15 @@
 /*   By: aouassar <aouassar@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:17:01 by aouassar          #+#    #+#             */
-/*   Updated: 2025/11/18 16:05:41 by aouassar         ###   ########.fr       */
+/*   Updated: 2025/11/24 14:57:44 by aouassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-#include <unistd.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_print_char(int c);
