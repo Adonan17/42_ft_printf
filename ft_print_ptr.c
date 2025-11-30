@@ -6,7 +6,7 @@
 /*   By: aouassar <aouassar@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:17:22 by aouassar          #+#    #+#             */
-/*   Updated: 2025/11/30 16:10:12 by aouassar         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:15:10 by aouassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_print_ptr(unsigned long long ptr)
 
 	if (ptr == 0)
 	{
-		write(1, "(nil)", 1);
+		write(1, "(nil)", 5);
 		return (5);
 	}
 	write(1, "0x", 2);
