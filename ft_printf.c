@@ -6,26 +6,26 @@
 /*   By: aouassar <aouassar@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:17:13 by aouassar          #+#    #+#             */
-/*   Updated: 2025/11/24 15:12:46 by aouassar         ###   ########.fr       */
+/*   Updated: 2025/11/30 17:51:50 by aouassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_formats(va_list args, char specifier)
+static int	ft_formats(va_list *args, char specifier)
 {
 	if (specifier == 'c')
-		return (ft_print_char(va_arg(args, int)));
+		return (ft_print_char(va_arg(*args, int)));
 	else if (specifier == 's')
-		return (ft_print_str(va_arg(args, char *)));
+		return (ft_print_str(va_arg(*args, char *)));
 	else if (specifier == 'd' || specifier == 'i')
-		return (ft_print_nbr(va_arg(args, int)));
+		return (ft_print_nbr(va_arg(*args, int)));
 	else if (specifier == 'u')
-		return (ft_print_uint(va_arg(args, unsigned int)));
+		return (ft_print_uint(va_arg(*args, unsigned int)));
 	else if (specifier == 'x' || specifier == 'X')
-		return (ft_print_hex(va_arg(args, unsigned int), specifier));
+		return (ft_print_hex(va_arg(*args, unsigned int), specifier));
 	else if (specifier == 'p')
-		return (ft_print_ptr((unsigned long long)va_arg(args, void *)));
+		return (ft_print_ptr((unsigned long long)va_arg(*args, void *)));
 	else if (specifier == '%')
 		return (write(1, "%", 1));
 	return (0);
